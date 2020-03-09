@@ -1,0 +1,19 @@
+ip: 192.168.10.10
+memory: 2048
+cpus: 1
+provider: virtualbox
+authorize: C:/Users/julie/.ssh/id_rsa.pub
+keys:
+    - C:/Users/julie/.ssh/id_rsa
+folders:
+    -
+        map: 'C:\Users\julie\code'
+        to: /home/vagrant/code
+sites:
+    -
+        map: homestead.test
+        to: /home/vagrant/code/public
+databases:
+    - homestead
+name: code
+hostname: code

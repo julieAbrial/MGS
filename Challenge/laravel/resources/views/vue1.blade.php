@@ -1,13 +1,14 @@
-<!-- Stored in resources/views/child.blade.php -->
+
 
 @extends('layouts.app')
 
 @section('title', 'Page Title')
 
 <!--menu du sidebar-->
-<!--TODO : corriger le bug des font-awesome pour les logos-->
 @section('sidebar')
-
+    @section('logomobile')
+    <img src="/template/brand_logo.png" class="img-responsive" alt="logo">
+    @stop
 @section('logo')
   <img src="/template/brand_logo.png" class="img-responsive" alt="logo">
 @stop
@@ -103,15 +104,38 @@
 
 
 <!--Début du background-->
-<!--TODO : ajouter de quoi faire fonctionner le slider pour avoir plusieurs image de fonds en définalement-->
+<!--TODO :Faire fonctionner le défilement entre les différents slides-->
 
-        @section('background')
+        @section('background1')
         <div data-v-24a269aa="" class="fullbg  " style="background-image: url(/template/background.jpg);"></div>
+        @stop
+        @section('background2')
+        <div data-v-24a269aa="" class="fullbg  hidden-slide" style="background-image: url(/template/brand_logo.png);"></div>
+        @stop
+        @section('background3')
+        <div data-v-24a269aa="" class="fullbg  hidden-slide" style="background-image: url(/template/background.jpg);"></div>
         @stop
 
 <!--Fin du background-->
 
+<!--Début du Pop-up 1-->
 
+<!--TODO : faire refermer automatiquement les pop up après 5 secondes d'affichage-->
+          @section('popup1')
+            <h1>-10% sur nos chambres</h1>
+            <p>*Pendant tout le mois de juillet.</p>
+          @stop
+<!--Fin du Pop-up1-->
+
+
+<!--Début du Pop-up 2-->
+      @section('popup2')
+        <h1>Locations et spa à Bandol</h1>
+        <p>texte accueil 1 Soluta aut neque sint incidunt doloribus iure. Ipsum nulla vero in culpa architecto sit error. Soluta ipsum ea vitae eveniet corrupti saepe. Tenetur et aspernatur sapiente nisi velit. Qui ab expedita reiciendis sint. Dolore pepiciatis expedita dolorem iusto sit sapiente. Repellendus dolores omnis animi enim odio sint nemo non. Sit neque est voluptas voluptatem consequatur magni et eligendi.</p>
+        </div>
+      @stop
+
+<!--Fin du Pop-up2-->
 
 @section('content')
     <p>This is my body content.</p>

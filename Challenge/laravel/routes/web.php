@@ -13,6 +13,9 @@
 Route::get('/', 'WelcomeController@index');
 Route::get('/', 'Vue1Controller@vue1');
 
+Route::get('', function () {
+    return view('welcome');
+});
 Route::get('welcome', function () {
     return view('welcome');
 });

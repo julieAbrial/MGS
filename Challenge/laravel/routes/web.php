@@ -12,6 +12,7 @@
 */
 Route::get('/', 'WelcomeController@index');
 Route::get('/', 'Vue1Controller@vue1');
+Route::get('/', 'Vue2Controller@vue2');
 
 Route::get('', function () {
     return view('welcome');
@@ -22,4 +23,8 @@ Route::get('welcome', function () {
 
 Route::get('vue1', function () {
     return view('vue1');
+});
+
+Route::get('vue2', function () {
+    return view('vue2');
 });
